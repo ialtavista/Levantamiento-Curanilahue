@@ -6,7 +6,7 @@ function categories_Colector_2(feature, value, size, resolution, labelText,
                 var valueStr = (value !== null && value !== undefined) ? value.toString() : 'default';
                 switch(valueStr) {case 'PENDIENTE':
                     return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(221,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 0.988}),
+        stroke: new ol.style.Stroke({color: 'rgba(255,0,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 0.988}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
@@ -14,7 +14,15 @@ function categories_Colector_2(feature, value, size, resolution, labelText,
                     break;
 case 'VERIFICADO':
                     return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(0,255,8,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 0.988}),
+        stroke: new ol.style.Stroke({color: 'rgba(31,255,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 0.988}),
+        text: createTextStyle(feature, resolution, labelText, labelFont,
+                              labelFill, placement, bufferColor,
+                              bufferWidth)
+    })];
+                    break;
+case 'SEMI VERIFICADO':
+                    return [ new ol.style.Style({
+        stroke: new ol.style.Stroke({color: 'rgba(228,255,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 1.52}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
