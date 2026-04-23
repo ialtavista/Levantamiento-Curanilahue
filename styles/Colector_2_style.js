@@ -45,8 +45,8 @@ var style_Colector_2 = function(feature, resolution){
     var offsetX = 0;
     var offsetY = 0;
     var placement = 'line';
-    if (feature.get("Name") !== null) {
-        labelText = String(feature.get("Name"));
+    if ("" !== null) {
+        labelText = String("");
     }
     
     var style = categories_Colector_2(feature, value, size, resolution, labelText,
